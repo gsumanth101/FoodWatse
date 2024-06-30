@@ -76,34 +76,76 @@
         <h1>QuantityCheck Form</h1>
         <form action="/submit_form" method="post">
             <label for="typeOfFood">Type of Food</label>
-            <input type="text" id="typeOfFood" name="typeOfFood" required>
+            <!-- <input type="text" id="typeOfFood" name="typeOfFood" required> -->
+                <select name="typeOfFood" id="typeOfFood">
+                <option value="0">Baked Goods</option>
+                <option value="1">Dairy Products</option>
+                <option value="2">Fruits</option>
+                <option value="3">Meat</option>
+                <option value="4">Vegetables</option>
+            </select>
+
 
             <label for="numberOfGuests">Number of Guests</label>
             <input type="number" id="numberOfGuests" name="numberOfGuests" required>
 
             <label for="eventType">Event Type</label>
-            <input type="text" id="eventType" name="eventType" required>
+            <!-- <input type="text" id="eventType" name="eventType" required> -->
+            <select name="eventType" id="eventType">
+                <option value="0">Birthday</option>
+                <option value="1">Corporate</option>
+                <option value="2">Social Gathering</option>
+                <option value="3">Wedding</option>
+            </select>
 
             <label for="quantityOfFood">Quantity of Food</label>
             <input type="number" id="quantityOfFood" name="quantityOfFood" required>
 
             <label for="storageConditions">Storage Conditions</label>
-            <input type="text" id="storageConditions" name="storageConditions" required>
+            <!-- <input type="text" id="storageConditions" name="storageConditions" required> -->
+            <select name="storageConditions" id="storageConditions">
+                <option value="0">Refrigerated</option>
+                <option value="1">Room Temperature</option>
+            </select>
 
             <label for="purchaseHistory">Purchase History</label>
-            <input type="text" id="purchaseHistory" name="purchaseHistory" required>
+            <!-- <input type="text" id="purchaseHistory" name="purchaseHistory" required> -->
+            <select name="purchaseHistory" id="purchaseHistory">
+                <option value="0">Occational</option>
+                <option value="1">Regular</option>
+            </select>
 
             <label for="seasonality">Seasonality</label>
-            <input type="text" id="seasonality" name="seasonality" required>
+            <!-- <input type="text" id="seasonality" name="seasonality" required> -->
+            <select name="seasonality" id="seasonality">
+                <option value="0">All Seasons</option>
+                <option value="1">Summer</option>
+                <option value="2">Winter</option>
+            </select>
 
             <label for="preparationMethod">Preparation Method</label>
-            <input type="text" id="preparationMethod" name="preparationMethod" required>
+            <!-- <input type="text" id="preparationMethod" name="preparationMethod" required> -->
+            <select name="preparationMethod" id="preparationMethod">
+                <option value="0">Buffet</option>
+                <option value="1">Finger Food</option>
+                <option value="2">Sit-Down Dinner</option>
+            </select>
 
             <label for="geographicalLocation">Geographical Location</label>
-            <input type="text" id="geographicalLocation" name="geographicalLocation" required>
+            <!-- <input type="text" id="geographicalLocation" name="geographicalLocation" required> -->
+            <select name="geographicalLocation" id="geographicalLocation">
+                <option value="0">Rural</option>
+                <option value="1">Sub-Urban</option>
+                <option value="2">Urban</option>
+            </select>
 
             <label for="pricing">Pricing</label>
-            <input type="text" id="pricing" name="pricing" required>
+            <!-- <input type="text" id="pricing" name="pricing" required> -->
+            <select name="pricing" id="pricing">
+                <option value="0">High</option>
+                <option value="1">Low</option>
+                <option value="2">Moderate</option>
+            </select>
             
             <div class="submit-button-container">
                 <button type="submit">Submit</button>
