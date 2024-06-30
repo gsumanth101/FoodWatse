@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Site favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="theme-color" content="#ffffff">
+    
+        <!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+        body {
+            /* background-image: url('images/bg.webp');  */
+            background-image: url('{{ url_for("static", filename="images/bg.webp") }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 0px;
+        }
+        .section {
+            display: flex;
+            align-items: center;
+            padding: 50px;
+            color: white; 
+            margin-top: 410px; 
+            margin-right: 500px;
+        }
+        .section-text {
+            flex: 1;
+        }
+        b{
+            font-size: 20px;
+            color: skyblue;
+        }      
+        a{
+            color: skyblue;
+        } 
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="content">
+        <div id="contact" class="section" style="flex-direction: row-reverse;">
+            <div class="section-text">
+                <b>Have a question? Need assistance? Don't hesitate to get in touch. Our friendly team is here to provide you with the support you need.</b><br><br>
+                <b>Your trust is the foundation of our success. Contact us with confidence, knowing that we're committed to earning and maintaining your trust.</b>        
+                <h2>Contact Us</h2>
+                <p>
+                    <i class="fas fa-phone-alt"></i> Phone: <a href="tel:+123456789">+91 123456789</a>
+                </p>
+                <p>
+                    <i class="fas fa-globe"></i> Website: <a href="https://www.example.com">www.example.com</a>
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i> Email: <a href="mailto:example@example.com">example@example.com</a>
+                </p>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
