@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SustainableEats Form</title>
+    <!-- Site favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* background-image: url('images/join.jpg');  */
+            background-image: url('{{ url_for("static", filename="images/join.jpg") }}');
+            background-size: cover;
+            background-attachment: fixed; 
+            background-position: center;
+            height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; 
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.3); 
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px; 
+            max-height: 80vh; 
+            overflow-y: auto; 
+        }
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-container input, .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            backdrop-filter: blur(5px); 
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        .form-container .submit-button-container {
+            display: flex;
+            justify-content: center;
+        }
+        .form-container button {
+            width: 150px; 
+            padding: 10px;
+            background-color: #333333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>QuantityCheck Form</h1>
+        <form action="/submit_form" method="post">
+            <label for="typeOfFood">Type of Food</label>
+            <input type="text" id="typeOfFood" name="typeOfFood" required>
+
+            <label for="numberOfGuests">Number of Guests</label>
+            <input type="number" id="numberOfGuests" name="numberOfGuests" required>
+
+            <label for="eventType">Event Type</label>
+            <input type="text" id="eventType" name="eventType" required>
+
+            <label for="quantityOfFood">Quantity of Food</label>
+            <input type="number" id="quantityOfFood" name="quantityOfFood" required>
+
+            <label for="storageConditions">Storage Conditions</label>
+            <input type="text" id="storageConditions" name="storageConditions" required>
+
+            <label for="purchaseHistory">Purchase History</label>
+            <input type="text" id="purchaseHistory" name="purchaseHistory" required>
+
+            <label for="seasonality">Seasonality</label>
+            <input type="text" id="seasonality" name="seasonality" required>
+
+            <label for="preparationMethod">Preparation Method</label>
+            <input type="text" id="preparationMethod" name="preparationMethod" required>
+
+            <label for="geographicalLocation">Geographical Location</label>
+            <input type="text" id="geographicalLocation" name="geographicalLocation" required>
+
+            <label for="pricing">Pricing</label>
+            <input type="text" id="pricing" name="pricing" required>
+            
+            <div class="submit-button-container">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
